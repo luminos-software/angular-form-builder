@@ -181,7 +181,7 @@ angular.module 'builder.controller', ['builder.provider']
 
         $scope.optionsText = formObject.options.join '\n'
 
-        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod]', ->
+        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations]', ->
             formObject.label = $scope.label
             formObject.description = $scope.description
             formObject.placeholder = $scope.placeholder
@@ -210,6 +210,7 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.conversionType = $scope.conversionType
             formObject.searchScope = $scope.searchScope
             formObject.searchPeriod = $scope.searchPeriod
+            formObject.transformations = $scope.transformations
 
         , yes
 
@@ -255,6 +256,7 @@ angular.module 'builder.controller', ['builder.provider']
                 conversionType: $scope.conversionType
                 searchScope: $scope.searchScope
                 searchPeriod: $scope.searchPeriod
+                transformations: $scope.transformations
         rollback: ->
             ###
             Rollback input value.
@@ -288,6 +290,7 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.conversionType = @model.conversionType
             $scope.searchScope = @model.searchScope
             $scope.searchPeriod = @model.searchPeriod
+            $scope.transformations = @model.transformations
 ]
 
 # ----------------------------------------
