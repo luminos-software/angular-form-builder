@@ -308,6 +308,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
             {label: 'Text', rule: '[text]'}
             {label: 'Number', rule: '[numberRange]'}
         ]
+        transformations: {}
         template:
             """
             <div class="row" id="{{formName+index | nospace}}">
@@ -353,6 +354,10 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                             <div class='checkbox icheck-label'>
                               <input type="checkbox" id="{{'readonly' + date + index}}" ng-model="readOnly">
                               <label for="{{'readonly' + date + index}}">Read Only</label>
+                            </div>
+                            <div class='checkbox icheck-label'>
+                              <input type="checkbox" id="{{'titlecase' + date + index}}" ng-model="transformations.titleize">
+                              <label for="{{'titlecase' + date + index}}">Transform to Title Case3</label>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="{{'validations' + date + index}}">
