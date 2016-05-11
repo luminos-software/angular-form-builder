@@ -1,6 +1,6 @@
 {
   "name": "angular-multiform-builder",
-  "version": "1.16.12",
+  "version": "1.16.13",
   "main": [
     "./dist/angular-form-builder.js",
     "./dist/angular-form-builder-components.js"
