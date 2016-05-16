@@ -357,7 +357,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
                             </div>
                             <div class='checkbox icheck-label'>
                               <input type="checkbox" id="{{'titlecase' + date + index}}" ng-model="transformations.titleize">
-                              <label for="{{'titlecase' + date + index}}">Transform to Title Case3</label>
+                              <label for="{{'titlecase' + date + index}}">Transform to Title Case</label>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="{{'validations' + date + index}}">
