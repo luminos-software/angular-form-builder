@@ -130,7 +130,7 @@ angular.module 'builder.controller', ['builder.provider']
 
         $scope.optionsText = formObject.options.join '\n'
 
-        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations]', ->
+        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, upladerType]', ->
             formObject.label = $scope.label
             formObject.description = $scope.description
             formObject.placeholder = $scope.placeholder
@@ -159,6 +159,7 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.searchScope = $scope.searchScope
             formObject.searchPeriod = $scope.searchPeriod
             formObject.transformations = $scope.transformations
+            formObject.upoaderType = $scope.uploaderType
 
         , yes
 
@@ -204,6 +205,7 @@ angular.module 'builder.controller', ['builder.provider']
                 searchScope: $scope.searchScope
                 searchPeriod: $scope.searchPeriod
                 transformations: $scope.transformations
+                uploaderType: $scope.uploaderType
         rollback: ->
             ###
             Rollback input value.
@@ -237,6 +239,7 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.searchScope = @model.searchScope
             $scope.searchPeriod = @model.searchPeriod
             $scope.transformations = @model.transformations
+            $scope.uploaderType = @model.uploaderType
 ]
 
 # ----------------------------------------

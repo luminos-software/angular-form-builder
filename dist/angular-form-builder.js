@@ -112,7 +112,7 @@
         var component;
         copyObjectToScope(formObject, $scope);
         $scope.optionsText = formObject.options.join('\n');
-        $scope.$watch('[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations]', function() {
+        $scope.$watch('[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, upladerType]', function() {
           formObject.label = $scope.label;
           formObject.description = $scope.description;
           formObject.placeholder = $scope.placeholder;
@@ -140,7 +140,8 @@
           formObject.conversionType = $scope.conversionType;
           formObject.searchScope = $scope.searchScope;
           formObject.searchPeriod = $scope.searchPeriod;
-          return formObject.transformations = $scope.transformations;
+          formObject.transformations = $scope.transformations;
+          return formObject.upoaderType = $scope.uploaderType;
         }, true);
         $scope.$watch('optionsText', function(text) {
           var x;
@@ -196,7 +197,8 @@
             conversionType: $scope.conversionType,
             searchScope: $scope.searchScope,
             searchPeriod: $scope.searchPeriod,
-            transformations: $scope.transformations
+            transformations: $scope.transformations,
+            uploaderType: $scope.uploaderType
           };
         },
         rollback: function() {
@@ -234,7 +236,8 @@
           $scope.conversionType = this.model.conversionType;
           $scope.searchScope = this.model.searchScope;
           $scope.searchPeriod = this.model.searchPeriod;
-          return $scope.transformations = this.model.transformations;
+          $scope.transformations = this.model.transformations;
+          return $scope.uploaderType = this.model.uploaderType;
         }
       };
     }
