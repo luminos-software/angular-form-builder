@@ -1382,7 +1382,7 @@
       return result;
     };
     this.convertFormObject = function(name, formObject) {
-      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
       if (formObject == null) {
         formObject = {};
       }
@@ -1422,7 +1422,8 @@
         conversionType: (_ref26 = formObject.conversionType) != null ? _ref26 : component.conversionType,
         searchScope: (_ref27 = formObject.searchScope) != null ? _ref27 : component.searchScope,
         searchPeriod: (_ref28 = formObject.searchPeriod) != null ? _ref28 : component.searchPeriod,
-        transformations: (_ref29 = formObject.transformations) != null ? _ref29 : component.transformations
+        transformations: (_ref29 = formObject.transformations) != null ? _ref29 : component.transformations,
+        uploaderType: (_ref30 = formObject.uploaderType) != null ? _ref30 : component.uploaderType
       };
       return result;
     };
