@@ -906,6 +906,7 @@ angular.module 'builder.components', ['builder', 'validator.rules']
             #     group: 'Advanced'
             #     label: 'Upload Photo'
             #     description: ''
+            #     uploaderType ''
             #     required: no
             #     readOnly: no
             #     template:
