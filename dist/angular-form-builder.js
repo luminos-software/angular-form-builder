@@ -141,7 +141,7 @@
           formObject.searchScope = $scope.searchScope;
           formObject.searchPeriod = $scope.searchPeriod;
           formObject.transformations = $scope.transformations;
-          return formObject.upoaderType = $scope.uploaderType;
+          return formObject.uploaderType = $scope.uploaderType;
         }, true);
         $scope.$watch('optionsText', function(text) {
           var x;

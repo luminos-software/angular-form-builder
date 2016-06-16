@@ -159,7 +159,7 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.searchScope = $scope.searchScope
             formObject.searchPeriod = $scope.searchPeriod
             formObject.transformations = $scope.transformations
-            formObject.upoaderType = $scope.uploaderType
+            formObject.uploaderType = $scope.uploaderType
 
         , yes
 
