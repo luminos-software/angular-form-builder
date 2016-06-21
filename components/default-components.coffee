@@ -1168,8 +1168,9 @@ angular.module 'builder.components', ['builder', 'validator.rules']
             # ----------------------------------------
             # $builderProvider.registerComponent 'upload',
             #     group: 'Advanced'
-            #     label: 'Upload Photo'
+            #     label: 'Upload File'
             #     description: ''
+            #     uploaderType: ''
             #     required: no
             #     readOnly: no
             #     template:
