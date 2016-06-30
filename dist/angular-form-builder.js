@@ -448,7 +448,7 @@
         var component;
         copyObjectToScope(formObject, $scope);
         $scope.optionsText = formObject.options.join('\n');
-        $scope.$watch('[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, uploaderType, client, searchToken]', function() {
+        $scope.$watch('[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, uploaderType, client, searchToken, requireHit]', function() {
           formObject.label = $scope.label;
           formObject.description = $scope.description;
           formObject.placeholder = $scope.placeholder;
@@ -480,7 +480,8 @@
           formObject.transformations = $scope.transformations;
           formObject.uploaderType = $scope.uploaderType;
           formObject.client = $scope.client;
-          return formObject.searchToken = $scope.searchToken;
+          formObject.searchToken = $scope.searchToken;
+          return formObject.requireHit = $scope.requireHit;
         }, true);
         $scope.$watch('optionsText', function(text) {
           var x;
@@ -540,7 +541,8 @@
             transformations: $scope.transformations,
             uploaderType: $scope.uploaderType,
             client: $scope.client,
-            searchToken: $scope.searchToken
+            searchToken: $scope.searchToken,
+            requireHit: $scope.requireHit
           };
         },
         rollback: function() {
@@ -582,7 +584,8 @@
           $scope.transformations = this.model.transformations;
           $scope.uploaderType = this.model.uploaderType;
           $scope.client = this.model.client;
-          return $scope.searchToken = this.model.searchToken;
+          $scope.searchToken = this.model.searchToken;
+          return $scope.requireHit = this.model.requireHit;
         }
       };
     }
@@ -1724,7 +1727,7 @@
       return result;
     };
     this.convertFormObject = function(name, formObject) {
-      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
       if (formObject == null) {
         formObject = {};
       }
@@ -1767,7 +1770,8 @@
         transformations: (_ref29 = formObject.transformations) != null ? _ref29 : component.transformations,
         uploaderType: (_ref30 = formObject.uploaderType) != null ? _ref30 : component.uploaderType,
         client: (_ref31 = formObject.client) != null ? _ref31 : component.client,
-        searchToken: (_ref32 = formObject.searchToken) != null ? _ref32 : component.searchToken
+        searchToken: (_ref32 = formObject.searchToken) != null ? _ref32 : component.searchToken,
+        requireHit: (_ref33 = formObject.requireHit) != null ? _ref33 : component.requireHit
       };
       return result;
     };

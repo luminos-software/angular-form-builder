@@ -102,6 +102,7 @@ angular.module 'builder.provider', []
             uploaderType: formObject.uploaderType ? component.uploaderType
             client: formObject.client ? component.client
             searchToken: formObject.searchToken ? component.searchToken
+            requireHit: formObject.requireHit ? component.requireHit
         result
 
     @reindexFormObject = (name) =>

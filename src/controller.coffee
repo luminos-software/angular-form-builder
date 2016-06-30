@@ -181,7 +181,7 @@ angular.module 'builder.controller', ['builder.provider']
 
         $scope.optionsText = formObject.options.join '\n'
 
-        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, uploaderType, client, searchToken]', ->
+        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, uploaderType, client, searchToken, requireHit]', ->
             formObject.label = $scope.label
             formObject.description = $scope.description
             formObject.placeholder = $scope.placeholder
@@ -214,6 +214,7 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.uploaderType = $scope.uploaderType
             formObject.client = $scope.client
             formObject.searchToken = $scope.searchToken
+            formObject.requireHit = $scope.requireHit
         , yes
 
         $scope.$watch 'optionsText', (text) ->
@@ -262,6 +263,7 @@ angular.module 'builder.controller', ['builder.provider']
                 uploaderType: $scope.uploaderType
                 client: $scope.client
                 searchToken: $scope.searchToken
+                requireHit: $scope.requireHit
         rollback: ->
             ###
             Rollback input value.
@@ -299,6 +301,7 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.uploaderType = @model.uploaderType
             $scope.client = @model.client
             $scope.searchToken = @model.searchToken
+            $scope.requireHit = @model.requireHit
 ]
 
 # ----------------------------------------
