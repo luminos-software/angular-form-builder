@@ -99,6 +99,10 @@ angular.module 'builder.provider', []
             searchScope: formObject.searchScope ? component.searchScope
             searchPeriod: formObject.searchPeriod ? component.searchPeriod
             transformations: formObject.transformations ? component.transformations
+            uploaderType: formObject.uploaderType ? component.uploaderType
+            client: formObject.client ? component.client
+            searchToken: formObject.searchToken ? component.searchToken
+            requireHit: formObject.requireHit ? component.requireHit
         result
 
     @reindexFormObject = (name) =>

@@ -181,7 +181,7 @@ angular.module 'builder.controller', ['builder.provider']
 
         $scope.optionsText = formObject.options.join '\n'
 
-        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations]', ->
+        $scope.$watch '[label, description, placeholder, required, options, validation, multiple, minLength, maxLength, dateRangeStart, dateRangeEnd, disableWeekends, maxDate, requireConfirmation, readOnly, minRange, maxRange, nextXDays, performCreditCheck, creditCheckRequired, performMeterLookup, cprCountry, logic, category, conversionType, searchScope, searchPeriod, transformations, uploaderType, client, searchToken, requireHit]', ->
             formObject.label = $scope.label
             formObject.description = $scope.description
             formObject.placeholder = $scope.placeholder
@@ -211,7 +211,10 @@ angular.module 'builder.controller', ['builder.provider']
             formObject.searchScope = $scope.searchScope
             formObject.searchPeriod = $scope.searchPeriod
             formObject.transformations = $scope.transformations
-
+            formObject.uploaderType = $scope.uploaderType
+            formObject.client = $scope.client
+            formObject.searchToken = $scope.searchToken
+            formObject.requireHit = $scope.requireHit
         , yes
 
         $scope.$watch 'optionsText', (text) ->
@@ -257,6 +260,10 @@ angular.module 'builder.controller', ['builder.provider']
                 searchScope: $scope.searchScope
                 searchPeriod: $scope.searchPeriod
                 transformations: $scope.transformations
+                uploaderType: $scope.uploaderType
+                client: $scope.client
+                searchToken: $scope.searchToken
+                requireHit: $scope.requireHit
         rollback: ->
             ###
             Rollback input value.
@@ -291,6 +298,10 @@ angular.module 'builder.controller', ['builder.provider']
             $scope.searchScope = @model.searchScope
             $scope.searchPeriod = @model.searchPeriod
             $scope.transformations = @model.transformations
+            $scope.uploaderType = @model.uploaderType
+            $scope.client = @model.client
+            $scope.searchToken = @model.searchToken
+            $scope.requireHit = @model.requireHit
 ]
 
 # ----------------------------------------
