@@ -1176,7 +1176,7 @@
                   }
                 }
               }
-              return scope.inputText = checked.join(', ');
+              return scope.inputText = checked;
             }, true);
           }
           scope.$watch('inputText', function() {
