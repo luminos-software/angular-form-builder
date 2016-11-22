@@ -59,8 +59,6 @@ angular.module 'builder.provider', []
             popoverTemplateUrl: component.popoverTemplateUrl
         if not result.template and not result.templateUrl
             console.error "The template is empty."
-        if not result.popoverTemplate and not result.popoverTemplateUrl
-            console.error "The popoverTemplate is empty."
         result
 
     @convertFormObject = (name, formObject={}) ->
