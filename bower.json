@@ -32,5 +32,8 @@
     "angular-summernote": "~0.3.2",
     "font-awesome": "~4.3.0",
     "iCheck": "~1.0.2"
+  },
+  "resolutions": {
+    "angular": ">=1.2.18"
   }
 }

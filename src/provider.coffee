@@ -102,6 +102,8 @@ angular.module 'builder.provider', []
             searchToken: formObject.searchToken ? component.searchToken
             requireHit: formObject.requireHit ? component.requireHit
             voucherCampaign: formObject.voucherCampaign ? component.voucherCampaign
+            seasMonthlySubscriptionPrice: formObject.seasMonthlySubscriptionPrice ? component.seasMonthlySubscriptionPrice
+            seasPricePerKwh: formObject.seasPricePerKwh ? component.seasPricePerKwh
         result
 
     @reindexFormObject = (name) =>
