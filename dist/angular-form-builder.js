@@ -1089,18 +1089,6 @@
         return scope.minLength === 0 || (value.length >= scope.minLength && value.length <= scope.maxLength);
       }
     });
-    $validator.register('sortCode', {
-      invoke: 'watch',
-      validator: function(value, scope, element, attrs, $injector) {
-        return scope.minSortCodeLength === 0 || (value.length >= scope.minSortCodeLength && value.length <= scope.maxSortCodeLength);
-      }
-    });
-    $validator.register('accountNumber', {
-      invoke: 'watch',
-      validator: function(value, scope, element, attrs, $injector) {
-        return scope.minAccountNumberLength === 0 || (value.length >= scope.minAccountNumberLength && value.length <= scope.maxAccountNumberLength);
-      }
-    });
     return $validator.register('numberRange', {
       invoke: 'watch',
       validator: function(value, scope, element, attrs, $injector) {
