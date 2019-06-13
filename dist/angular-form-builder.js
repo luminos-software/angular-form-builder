@@ -1089,6 +1089,18 @@
         return scope.minLength === 0 || (value.length >= scope.minLength && value.length <= scope.maxLength);
       }
     });
+    $validator.register('sortCode', {
+      invoke: 'watch',
+      validator: function(value, scope, element, attrs, $injector) {
+        return scope.minSortCodeLength === 0 || (value.length >= scope.minSortCodeLength && value.length <= scope.maxSortCodeLength);
+      }
+    });
+    $validator.register('accountNumber', {
+      invoke: 'watch',
+      validator: function(value, scope, element, attrs, $injector) {
+        return scope.minAccountNumberLength === 0 || (value.length >= scope.minAccountNumberLength && value.length <= scope.maxAccountNumberLength);
+      }
+    });
     return $validator.register('numberRange', {
       invoke: 'watch',
       validator: function(value, scope, element, attrs, $injector) {
@@ -1157,7 +1169,7 @@
       return result;
     };
     this.convertFormObject = function(name, formObject) {
-      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref5, _ref6, _ref7, _ref8, _ref9;
       if (formObject == null) {
         formObject = {};
       }
@@ -1179,32 +1191,36 @@
         multiple: (_ref8 = formObject.multiple) != null ? _ref8 : component.multiple,
         minLength: (_ref9 = formObject.minLength) != null ? _ref9 : component.minLength,
         maxLength: (_ref10 = formObject.maxLength) != null ? _ref10 : component.maxLength,
-        dateRangeStart: (_ref11 = formObject.dateRangeStart) != null ? _ref11 : component.dateRangeStart,
-        dateRangeEnd: (_ref12 = formObject.dateRangeEnd) != null ? _ref12 : component.dateRangeEnd,
-        disableWeekends: (_ref13 = formObject.disableWeekends) != null ? _ref13 : component.disableWeekends,
-        readOnly: (_ref14 = formObject.readOnly) != null ? _ref14 : component.readOnly,
-        nextXDays: (_ref15 = formObject.nextXDays) != null ? _ref15 : component.nextXDays,
-        maxDate: (_ref16 = formObject.maxDate) != null ? _ref16 : component.maxDate,
-        requireConfirmation: (_ref17 = formObject.requireConfirmation) != null ? _ref17 : component.requireConfirmation,
-        minRange: (_ref18 = formObject.minRange) != null ? _ref18 : component.minRange,
-        maxRange: (_ref19 = formObject.maxRange) != null ? _ref19 : component.maxRange,
-        performCreditCheck: (_ref20 = formObject.performCreditCheck) != null ? _ref20 : component.performCreditCheck,
-        creditCheckRequired: (_ref21 = formObject.creditCheckRequired) != null ? _ref21 : component.creditCheckRequired,
-        performMeterLookup: (_ref22 = formObject.performMeterLookup) != null ? _ref22 : component.performMeterLookup,
-        cprCountry: (_ref23 = formObject.cprCountry) != null ? _ref23 : component.cprCountry,
-        logic: (_ref24 = formObject.logic) != null ? _ref24 : component.logic,
-        category: (_ref25 = formObject.category) != null ? _ref25 : component.category,
-        conversionType: (_ref26 = formObject.conversionType) != null ? _ref26 : component.conversionType,
-        searchScope: (_ref27 = formObject.searchScope) != null ? _ref27 : component.searchScope,
-        searchPeriod: (_ref28 = formObject.searchPeriod) != null ? _ref28 : component.searchPeriod,
-        transformations: (_ref29 = formObject.transformations) != null ? _ref29 : component.transformations,
-        uploaderType: (_ref30 = formObject.uploaderType) != null ? _ref30 : component.uploaderType,
-        client: (_ref31 = formObject.client) != null ? _ref31 : component.client,
-        searchToken: (_ref32 = formObject.searchToken) != null ? _ref32 : component.searchToken,
-        requireHit: (_ref33 = formObject.requireHit) != null ? _ref33 : component.requireHit,
-        voucherCampaign: (_ref34 = formObject.voucherCampaign) != null ? _ref34 : component.voucherCampaign,
-        seasMonthlySubscriptionPrice: (_ref35 = formObject.seasMonthlySubscriptionPrice) != null ? _ref35 : component.seasMonthlySubscriptionPrice,
-        seasPricePerKwh: (_ref36 = formObject.seasPricePerKwh) != null ? _ref36 : component.seasPricePerKwh
+        minSortCodeLength: (_ref11 = formObject.minSortCodeLength) != null ? _ref11 : component.minSortCodeLength,
+        maxSortCodeLength: (_ref12 = formObject.maxSortCodeLength) != null ? _ref12 : component.maxSortCodeLength,
+        minAccountNumberLength: (_ref13 = formObject.minAccountNumberLength) != null ? _ref13 : component.minAccountNumberLength,
+        maxAccountNumberLength: (_ref14 = formObject.maxAccountNumberLength) != null ? _ref14 : component.maxAccountNumberLength,
+        dateRangeStart: (_ref15 = formObject.dateRangeStart) != null ? _ref15 : component.dateRangeStart,
+        dateRangeEnd: (_ref16 = formObject.dateRangeEnd) != null ? _ref16 : component.dateRangeEnd,
+        disableWeekends: (_ref17 = formObject.disableWeekends) != null ? _ref17 : component.disableWeekends,
+        readOnly: (_ref18 = formObject.readOnly) != null ? _ref18 : component.readOnly,
+        nextXDays: (_ref19 = formObject.nextXDays) != null ? _ref19 : component.nextXDays,
+        maxDate: (_ref20 = formObject.maxDate) != null ? _ref20 : component.maxDate,
+        requireConfirmation: (_ref21 = formObject.requireConfirmation) != null ? _ref21 : component.requireConfirmation,
+        minRange: (_ref22 = formObject.minRange) != null ? _ref22 : component.minRange,
+        maxRange: (_ref23 = formObject.maxRange) != null ? _ref23 : component.maxRange,
+        performCreditCheck: (_ref24 = formObject.performCreditCheck) != null ? _ref24 : component.performCreditCheck,
+        creditCheckRequired: (_ref25 = formObject.creditCheckRequired) != null ? _ref25 : component.creditCheckRequired,
+        performMeterLookup: (_ref26 = formObject.performMeterLookup) != null ? _ref26 : component.performMeterLookup,
+        cprCountry: (_ref27 = formObject.cprCountry) != null ? _ref27 : component.cprCountry,
+        logic: (_ref28 = formObject.logic) != null ? _ref28 : component.logic,
+        category: (_ref29 = formObject.category) != null ? _ref29 : component.category,
+        conversionType: (_ref30 = formObject.conversionType) != null ? _ref30 : component.conversionType,
+        searchScope: (_ref31 = formObject.searchScope) != null ? _ref31 : component.searchScope,
+        searchPeriod: (_ref32 = formObject.searchPeriod) != null ? _ref32 : component.searchPeriod,
+        transformations: (_ref33 = formObject.transformations) != null ? _ref33 : component.transformations,
+        uploaderType: (_ref34 = formObject.uploaderType) != null ? _ref34 : component.uploaderType,
+        client: (_ref35 = formObject.client) != null ? _ref35 : component.client,
+        searchToken: (_ref36 = formObject.searchToken) != null ? _ref36 : component.searchToken,
+        requireHit: (_ref37 = formObject.requireHit) != null ? _ref37 : component.requireHit,
+        voucherCampaign: (_ref38 = formObject.voucherCampaign) != null ? _ref38 : component.voucherCampaign,
+        seasMonthlySubscriptionPrice: (_ref39 = formObject.seasMonthlySubscriptionPrice) != null ? _ref39 : component.seasMonthlySubscriptionPrice,
+        seasPricePerKwh: (_ref40 = formObject.seasPricePerKwh) != null ? _ref40 : component.seasPricePerKwh
       };
       return result;
     };

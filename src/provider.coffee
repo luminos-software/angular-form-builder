@@ -78,6 +78,10 @@ angular.module 'builder.provider', []
             multiple: formObject.multiple ? component.multiple
             minLength: formObject.minLength ? component.minLength
             maxLength: formObject.maxLength ? component.maxLength
+            minSortCodeLength: formObject.minSortCodeLength ? component.minSortCodeLength
+            maxSortCodeLength: formObject.maxSortCodeLength ? component.maxSortCodeLength
+            minAccountNumberLength: formObject.minAccountNumberLength ? component.minAccountNumberLength
+            maxAccountNumberLength: formObject.maxAccountNumberLength ? component.maxAccountNumberLength
             dateRangeStart: formObject.dateRangeStart ? component.dateRangeStart
             dateRangeEnd: formObject.dateRangeEnd ? component.dateRangeEnd
             disableWeekends: formObject.disableWeekends ? component.disableWeekends
