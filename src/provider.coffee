@@ -74,6 +74,7 @@ angular.module 'builder.provider', []
             placeholder: formObject.placeholder ? component.placeholder
             options: formObject.options ? component.options
             required: formObject.required ? component.required
+            showExtraInfo2: formObject.showExtraInfo2 ? component.showExtraInfo2
             validation: formObject.validation ? component.validation
             multiple: formObject.multiple ? component.multiple
             minLength: formObject.minLength ? component.minLength
