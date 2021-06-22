@@ -109,6 +109,11 @@ angular.module 'builder.provider', []
             voucherCampaign: formObject.voucherCampaign ? component.voucherCampaign
             seasMonthlySubscriptionPrice: formObject.seasMonthlySubscriptionPrice ? component.seasMonthlySubscriptionPrice
             seasPricePerKwh: formObject.seasPricePerKwh ? component.seasPricePerKwh
+            dueDate: formObject.dueDate ? component.dueDate
+            dateRange: formObject.dateRange ? component.dateRange
+            dueDateValue: formObject.dueDateValue ? component.dueDateValue
+            dateMaxRange: formObject.dateMaxRange ? component.dateMaxRange
+            dateMinRange: formObject.dateMinRange ? component.dateMinRange
         result
 
     @reindexFormObject = (name) =>

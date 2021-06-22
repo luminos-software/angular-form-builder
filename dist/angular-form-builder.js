@@ -1157,7 +1157,7 @@
       return result;
     };
     this.convertFormObject = function(name, formObject) {
-      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var component, result, _ref, _ref1, _ref10, _ref11, _ref12, _ref13, _ref14, _ref15, _ref16, _ref17, _ref18, _ref19, _ref2, _ref20, _ref21, _ref22, _ref23, _ref24, _ref25, _ref26, _ref27, _ref28, _ref29, _ref3, _ref30, _ref31, _ref32, _ref33, _ref34, _ref35, _ref36, _ref37, _ref38, _ref39, _ref4, _ref40, _ref41, _ref42, _ref43, _ref44, _ref45, _ref46, _ref5, _ref6, _ref7, _ref8, _ref9;
       if (formObject == null) {
         formObject = {};
       }
@@ -1209,7 +1209,12 @@
         requireHit: (_ref38 = formObject.requireHit) != null ? _ref38 : component.requireHit,
         voucherCampaign: (_ref39 = formObject.voucherCampaign) != null ? _ref39 : component.voucherCampaign,
         seasMonthlySubscriptionPrice: (_ref40 = formObject.seasMonthlySubscriptionPrice) != null ? _ref40 : component.seasMonthlySubscriptionPrice,
-        seasPricePerKwh: (_ref41 = formObject.seasPricePerKwh) != null ? _ref41 : component.seasPricePerKwh
+        seasPricePerKwh: (_ref41 = formObject.seasPricePerKwh) != null ? _ref41 : component.seasPricePerKwh,
+        dueDate: (_ref42 = formObject.dueDate) != null ? _ref42 : component.dueDate,
+        dateRange: (_ref43 = formObject.dateRange) != null ? _ref43 : component.dateRange,
+        dueDateValue: (_ref44 = formObject.dueDateValue) != null ? _ref44 : component.dueDateValue,
+        dateMaxRange: (_ref45 = formObject.dateMaxRange) != null ? _ref45 : component.dateMaxRange,
+        dateMinRange: (_ref46 = formObject.dateMinRange) != null ? _ref46 : component.dateMinRange
       };
       return result;
     };
